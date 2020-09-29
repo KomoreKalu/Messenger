@@ -12,9 +12,9 @@ if [ "$1" == "RECEIVED" ]; then
 fi
 
 vurp(){
-	if [ $CODE -eq 200 ]; then
+	if [ $CODE -ge 200 -a $CODE -lt 400]; then
 		curl -d "chat_id=$ID&text=$CONTENT" -X POST https://api.telegram.org/bot$TOKEN/sendMessage -x socks5://172.16.7.1:3077
-	elif [ $LOOP ]; then
+	elif [ $LOOP -gt 0 ]; then
 		((LOOP--))
 		echo "proxy failure"
 		sleep 300	
