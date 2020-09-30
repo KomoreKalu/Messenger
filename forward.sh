@@ -12,7 +12,7 @@ fi
 
 vurp(){
 	CODE=$(curl -o /dev/null -s -w "%{http_code}" https://www.google.com -x socks5://172.16.7.1:3077 --connect-timeout 10)
-	if [ "$CODE" == "200"]; then
+	if [ "$CODE" == "200" ]; then
 		curl -d "chat_id=$ID&text=$CONTENT" -X POST https://api.telegram.org/bot$TOKEN/sendMessage -x socks5://172.16.7.1:3077
 	elif [ $LOOP -gt 0 ]; then
 		echo "proxy failure"
