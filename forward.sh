@@ -15,7 +15,7 @@ vurp(){
 	if [ "$CODE" == "200" ]; then
 		curl -d "chat_id=$ID&text=$CONTENT" -X POST https://api.telegram.org/bot$TOKEN/sendMessage -x socks5://172.16.7.1:3077
 	elif [ $LOOP -gt 0 ]; then
-		echo "proxy failure"
+		echo "proxy failure at $(date '+%Y/%m/%d %H:%M')"
 		((LOOP--))
 		sleep 300	
 		vurp
