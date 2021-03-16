@@ -19,7 +19,7 @@ toTG(){
 }
 
 forward(){
-	toQmsg
+	#toQmsg
 	#toTG
 	if [ $? -ne 0 -a $LOOP -gt 0 ]; then
 		echo "failure at $(date '+%Y/%m/%d %H:%M')"
