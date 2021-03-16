@@ -4,7 +4,7 @@
 
 ### 依赖
 
-`bash curl smstools3 kmod-usb-serial kmod-usb-serial-wwan kmod-usb-serial-option usb-modeswitch`
+`bash curl iconv smstools3 kmod-usb-serial kmod-usb-serial-wwan kmod-usb-serial-option usb-modeswitch`
 
 ### 使用
 

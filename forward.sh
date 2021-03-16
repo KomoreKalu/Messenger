@@ -15,7 +15,7 @@ toQmsg(){
 }
 
 toTG(){
-	curl -d "chat_id=$ID&text=$CONTENT" -X POST https://api.telegram.org/bot${TOKEN}/sendMessage --retry 3 --retry-delay 5 
+	curl -d "chat_id=$ID&text=$CONTENT" https://api.telegram.org/bot${TOKEN}/sendMessage --retry 3 --retry-delay 5 
 }
 
 forward(){
